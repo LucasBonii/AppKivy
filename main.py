@@ -7,11 +7,13 @@ from bannervenda import BannerVenda
 from bannervendedor import BannerVendedor
 from myfirebase import MyFireBase
 import os
+import certifi
 from datetime import date
 from functools import partial
 
 #001824 #001024 #006D7E #032640
 
+os.environ["SSL_CERT_FILE"] = certifi.where()
 
 
 GUI = Builder.load_file('main.kv')
